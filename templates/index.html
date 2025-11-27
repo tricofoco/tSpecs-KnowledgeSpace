@@ -1,0 +1,47 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Knowledge App{% endblock %}
+
+{% block extra_head %}
+  <meta name="description" content="Searchable knowledge base built with Flask.">
+{% endblock %}
+
+{% block content %}
+<div class="layout">
+  <section class="panel panel-left">
+    <div class="panel-header">
+      <label for="search" class="field-label">Search topics</label>
+      <input
+        id="search"
+        type="text"
+        class="input"
+        placeholder="Type to search..."
+        autocomplete="off"
+      />
+    </div>
+
+    <div id="topics-list" class="topics-list">
+      <!-- Filled by JS -->
+      <div class="empty-state">Start typing to filter topics or create a new one.</div>
+    </div>
+  </section>
+
+  <section class="panel panel-right">
+    <div id="topic-detail" class="topic-detail">
+      <div class="empty-state">
+        Select a topic from the left to view its content.
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <div id="img-modal" class="modal hidden">
+    <span class="modal-close">&times;</span>
+    <img id="modal-img">
+  </div>
+{% endblock %}
+  
