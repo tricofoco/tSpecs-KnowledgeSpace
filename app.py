@@ -73,13 +73,17 @@ def create_app():
             os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
             
             files = request.files.getlist("images")
-            for file in files:
+            for index, file in enumerate(files):
                 if file and allowed_file(file.filename):
                     filename = secure_filename(file.filename)
                     save_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
                     file.save(save_path)
 
-                    img = Image(topic_id=topic.id, filename=filename)
+                    # Get title for this image if provided
+                    title_key = f"image_title_new_{index}"
+                    image_title = request.form.get(title_key, "").strip()
+                    
+                    img = Image(topic_id=topic.id, filename=filename, title=image_title)
                     db.session.add(img)
             db.session.commit()
             flash("Topic created successfully.", "success")

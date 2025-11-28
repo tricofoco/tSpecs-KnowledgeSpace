@@ -11,7 +11,7 @@
 <body>
   <header class="app-header">
     <div class="container header-inner">
-      <h1 class="app-title">Knowledge App</h1>
+      <img src="{{ url_for('static', filename='images/fireDog.png') }}" alt="Knowledge App" class="app-logo">
       <nav>
         <a href="{{ url_for('index') }}" class="nav-link">Home</a>
         <a href="{{ url_for('create_topic') }}" class="nav-link primary">New Topic</a>
