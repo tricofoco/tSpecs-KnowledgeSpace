@@ -468,11 +468,11 @@
   }
 
   .ql-stroke {
-    stroke: var(--text-muted);
+    stroke: #cbd5e1 !important;
   }
 
   .ql-fill {
-    fill: var(--text-muted);
+    fill: #cbd5e1 !important;
   }
 
   .ql-picker-label {
@@ -480,15 +480,41 @@
   }
 
   .ql-snow .ql-stroke {
-    stroke: var(--text-muted);
+    stroke: #cbd5e1 !important;
   }
 
   .ql-snow .ql-fill {
-    fill: var(--text-muted);
+    fill: #cbd5e1 !important;
   }
 
   .ql-snow .ql-picker {
     color: var(--text-main);
+  }
+
+  .ql-snow .ql-toolbar button:hover .ql-stroke,
+  .ql-snow .ql-toolbar button.ql-active .ql-stroke {
+    stroke: #f1f5f9 !important;
+  }
+
+  .ql-snow .ql-toolbar button:hover .ql-fill,
+  .ql-snow .ql-toolbar button.ql-active .ql-fill {
+    fill: #f1f5f9 !important;
+  }
+
+  .ql-snow .ql-toolbar .ql-stroke {
+    stroke: #cbd5e1 !important;
+  }
+
+  .ql-snow .ql-toolbar .ql-fill {
+    fill: #cbd5e1 !important;
+  }
+
+  .ql-snow .ql-toolbar svg .ql-stroke {
+    stroke: #cbd5e1 !important;
+  }
+
+  .ql-snow .ql-toolbar svg .ql-fill {
+    fill: #cbd5e1 !important;
   }
 
   .ql-editor.ql-blank::before {

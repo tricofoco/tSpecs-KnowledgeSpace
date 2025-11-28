@@ -14,7 +14,6 @@
       <img src="{{ url_for('static', filename='images/fireDog.png') }}" alt="Knowledge App" class="app-logo">
       <nav>
         <a href="{{ url_for('index') }}" class="nav-link">Home</a>
-        <a href="{{ url_for('create_topic') }}" class="nav-link primary">New Topic</a>
       </nav>
     </div>
   </header>
@@ -44,5 +43,20 @@
   </footer>
 
   {% block extra_scripts %}{% endblock %}
+  <script>
+    // Auto-hide flash messages after 5 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+      const flashMessages = document.querySelectorAll('.flash');
+      flashMessages.forEach(function(flash) {
+        setTimeout(function() {
+          flash.style.transition = 'opacity 0.5s';
+          flash.style.opacity = '0';
+          setTimeout(function() {
+            flash.remove();
+          }, 500);
+        }, 5000);
+      });
+    });
+  </script>
 </body>
 </html>

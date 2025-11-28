@@ -9,6 +9,33 @@
 
 {% block title %}{{ page_title }} • Knowledge App{% endblock %}
 
+{% block extra_head %}
+  <style>
+    /* Override Quill icon colors to be lighter grey */
+    .ql-snow .ql-stroke,
+    .ql-snow .ql-toolbar .ql-stroke,
+    .ql-snow .ql-toolbar svg .ql-stroke {
+      stroke: #cbd5e1 !important;
+    }
+    
+    .ql-snow .ql-fill,
+    .ql-snow .ql-toolbar .ql-fill,
+    .ql-snow .ql-toolbar svg .ql-fill {
+      fill: #cbd5e1 !important;
+    }
+    
+    .ql-snow .ql-toolbar button:hover .ql-stroke,
+    .ql-snow .ql-toolbar button.ql-active .ql-stroke {
+      stroke: #f1f5f9 !important;
+    }
+    
+    .ql-snow .ql-toolbar button:hover .ql-fill,
+    .ql-snow .ql-toolbar button.ql-active .ql-fill {
+      fill: #f1f5f9 !important;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
 <div class="form-card">
   <h2 class="form-title">{{ page_title }}</h2>
