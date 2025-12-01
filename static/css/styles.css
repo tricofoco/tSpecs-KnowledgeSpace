@@ -126,7 +126,7 @@
   
   .layout {
     display: grid;
-    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
     gap: 16px;
   }
   
@@ -182,7 +182,7 @@
     border: 1px solid var(--border-subtle);
     background-color: var(--bg);
     overflow: auto;
-    max-height: calc(100vh - 200px);
+    max-height: 300px;
   }
   
   .topic-item {
@@ -225,7 +225,12 @@
   
   .topic-detail-title {
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
+    color: #fcad03;
+    background-color: #000000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
   }
   
   .topic-detail {
@@ -353,10 +358,6 @@
   /* Responsive */
   
   @media (max-width: 768px) {
-    .layout {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  
     .topics-list {
       max-height: 260px;
     }
