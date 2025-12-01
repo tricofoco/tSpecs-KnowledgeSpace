@@ -1,9 +1,9 @@
 /* static/css/styles.css */
 
 :root {
-    --bg: #0f172a;
-    --bg-panel: #1e293b;
-    --border-subtle: #334155;
+    --bg: #2d2d2d;
+    --bg-panel: #3d3d3d;
+    --border-subtle: #4d4d4d;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
     --accent: #3b82f6;
